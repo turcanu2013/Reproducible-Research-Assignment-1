@@ -104,7 +104,7 @@ med_steps2<-format(median(steps_per_day2$steps),scientific=F)
 ```
 
 Mean steps per day in the new dataset is `r mean_steps2` and the median is `r med_steps2`, versus `r mean_steps` and `r med_steps` from the original dataset, respectively.  
-The new mean and median are slightly lower than for the original dataset. This might be because we used 0 to replace missing values, which would bring down the two statistics.  
+The new mean and median are slightly lower than for the original dataset. This might be because we used data lower than the median and mean in the original dataset to replace missing values, which would bring down the two statistics.  
 
 ### Are there differences in activity patterns between weekdays and weekends?  
 
