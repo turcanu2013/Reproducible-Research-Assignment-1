@@ -7,7 +7,7 @@ output: html_document
 
 ### Loading in data  
 
-#####1. Load the data.  
+##### 1. Load the data.  
 
 
 ```r
@@ -16,20 +16,20 @@ activity_data<-read.csv("activity.csv")
 activity_data$date<-as.POSIXct(activity_data$date, format="%Y-%m-%d")
 ```
 
-#####2. Process/transform the data (if necessary) into a format suitable for your analysis.  
+##### 2. Process/transform the data (if necessary) into a format suitable for your analysis.  
 
     No transformation of the data is necessary in this step.
     
 ### What is mean total number of steps taken per day?  
 
-#####1. Calculate the total number of steps taken per day.  
+##### 1. Calculate the total number of steps taken per day.  
 
 
 ```r
 steps_per_day<-aggregate(steps~date,data=activity_data, FUN=sum)
 ```
 
-#####2. Make a histogram of the total number of steps taken each day.  
+##### 2. Make a histogram of the total number of steps taken each day.  
 
 
 ```r
@@ -38,7 +38,7 @@ ggplot(steps_per_day,aes(steps))+geom_histogram(bins=20, color="navy", fill="sky
 
 ![plot of chunk histogram steps per day](figure/histogram steps per day-1.png)
 
-#####3. Calculate and report the mean and median of the total number of steps taken per day  
+##### 3. Calculate and report the mean and median of the total number of steps taken per day  
 
 
 ```r
@@ -52,7 +52,7 @@ The median steps per day is 10765.
 
 ### What is the average daily activity pattern?  
 
-#####1. Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis).  
+##### 1. Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis).  
 
 
 ```r
@@ -67,7 +67,7 @@ ggplot(int_5_min, aes(x=interval,y=steps) )+
 
 ![plot of chunk interval plot](figure/interval plot-1.png)
 
-#####2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?  
+##### 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?  
 
 
 ```r
