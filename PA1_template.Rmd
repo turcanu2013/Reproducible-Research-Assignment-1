@@ -30,7 +30,7 @@ steps_per_day<-aggregate(steps~date,data=activity_data, FUN=sum)
 #####2. Make a histogram of the total number of steps taken each day.  
 
 ```{r histogram steps per day, echo = TRUE}
-ggplot(steps_per_day,aes(steps))+geom_histogram(bins=10, color="navy", fill="skyblue2", size=.2)+labs(x="Steps", y="Count")+ggtitle("Steps per Day")+theme(plot.title = element_text(hjust = 0.5))
+ggplot(steps_per_day,aes(steps))+geom_histogram(bins=20, color="navy", fill="skyblue2", size=.2)+labs(x="Steps", y="Count")+ggtitle("Steps per Day")+theme(plot.title = element_text(hjust = 0.5))
 ```
 
 #####3. Calculate and report the mean and median of the total number of steps taken per day  
@@ -98,7 +98,7 @@ for (x in activity_data$steps){
 
 ```{r histogram complete dataset, echo=TRUE}
 steps_per_day2<-aggregate(steps~date,data=new_dataset, FUN=sum)
-ggplot(steps_per_day2,aes(steps))+geom_histogram(bins=10, color="navy", fill="skyblue2", size=.2)+labs(x="Steps", y="Count")+ggtitle("Steps per Day")+theme(plot.title = element_text(hjust = 0.5))
+ggplot(steps_per_day2,aes(steps))+geom_histogram(bins=20, color="navy", fill="skyblue2", size=.2)+labs(x="Steps", y="Count")+ggtitle("Steps per Day (Accounting for Missing Data)")+theme(plot.title = element_text(hjust = 0.5))
 mean_steps2<-format(mean(steps_per_day2$steps),scientific=F)
 med_steps2<-format(median(steps_per_day2$steps),scientific=F)
 ```
