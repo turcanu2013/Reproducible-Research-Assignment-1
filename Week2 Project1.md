@@ -36,7 +36,7 @@ steps_per_day<-aggregate(steps~date,data=activity_data, FUN=sum)
 ggplot(steps_per_day,aes(steps))+geom_histogram(bins=20, color="navy", fill="skyblue2", size=.2)+labs(x="Steps", y="Count")+ggtitle("Steps per Day")+theme(plot.title = element_text(hjust = 0.5))
 ```
 
-![plot of chunk histogram steps per day](figure/histogram steps per day-1.png)
+![plot of chunk histogram steps per day](Figures/Steps per Day.png)
 
 ##### 3. Calculate and report the mean and median of the total number of steps taken per day  
 
@@ -65,7 +65,7 @@ ggplot(int_5_min, aes(x=interval,y=steps) )+
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-![plot of chunk interval plot](figure/interval plot-1.png)
+![plot of chunk interval plot](Figures/Average Steps per Interval.png)
 
 ##### 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?  
 
@@ -114,7 +114,7 @@ steps_per_day2<-aggregate(steps~date,data=new_dataset, FUN=sum)
 ggplot(steps_per_day2,aes(steps))+geom_histogram(bins=20, color="navy", fill="skyblue2", size=.2)+labs(x="Steps", y="Count")+ggtitle("Steps per Day (Accounting For Missing Data)")+theme(plot.title = element_text(hjust = 0.5))
 ```
 
-![plot of chunk histogram complete dataset](figure/histogram complete dataset-1.png)
+![plot of chunk histogram complete dataset](Figures/Steps per Day Without Missing Values.png)
 
 ```r
 mean_steps2<-format(mean(steps_per_day2$steps),scientific=F)
@@ -148,4 +148,4 @@ steps<-rbind(weekday_steps, weekend_steps)
 ggplot(steps, aes(interval, steps, color=Weekday))+geom_line(show.legend=FALSE)+ facet_wrap(~Weekday, nrow =2, ncol = 1)+ggtitle("Average Steps by Time of Day")+theme(plot.title = element_text(hjust = 0.5))
 ```
 
-![plot of chunk plot by weekday](figure/plot by weekday-1.png)
+![plot of chunk plot by weekday](Figures/Average Steps by Time of Day.png)
