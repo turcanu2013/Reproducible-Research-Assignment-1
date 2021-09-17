@@ -14,7 +14,8 @@ This is the assignment in week 2 of the Coursera Reproducible Research course. T
 
 ## Files
 
-* The code to produce the final HTLM file can be found in `PA1_template.Rmd`.
+* The code to produce the final HTML file can be found in `PA1_template.Rmd`.
 * The graphs are also attached in the folder `Figures`.
-* A copy of the final HTLM file is attached under the name `Week_2_Assignment.htlm`.
+* A copy of the final HTML file is attached under the name `Week2 Project1.html`.
+* A Markdown final of the report can be founder under the name `Week2 Project1.md`.
 * The original data is added under `activity.csv`.
