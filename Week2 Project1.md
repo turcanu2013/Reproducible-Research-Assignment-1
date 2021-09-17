@@ -114,7 +114,7 @@ steps_per_day2<-aggregate(steps~date,data=new_dataset, FUN=sum)
 ggplot(steps_per_day2,aes(steps))+geom_histogram(bins=20, color="navy", fill="skyblue2", size=.2)+labs(x="Steps", y="Count")+ggtitle("Steps per Day (Accounting For Missing Data)")+theme(plot.title = element_text(hjust = 0.5))
 ```
 
-![plot of chunk histogram complete dataset](Fhttps://raw.githubusercontent.com/turcanu2013/Reproducible-Research-Assignment-1/main/Figures/Steps%20per%20Day%20Without%20Missing%20Values.png)
+![plot of chunk histogram complete dataset](https://raw.githubusercontent.com/turcanu2013/Reproducible-Research-Assignment-1/main/Figures/Steps%20per%20Day%20Without%20Missing%20Values.png)
 
 ```r
 mean_steps2<-format(mean(steps_per_day2$steps),scientific=F)
